@@ -1,14 +1,12 @@
-def inches_to_centimeters(inches):
-    return inches * 2.54
+def inches_to_cm():
+    while True:
+        user_input = input("Enter inches to convert to centimeters: ")
 
-while True:
-    try:
-        value = float(input("Enter a value in inches: "))
-        if value < 0:
+        inches = float(user_input)
+
+        if inches < 0:
             break
-        cm = inches_to_centimeters(value)
-        print(f"{value} inches is {cm} centimeters.")
-    except ValueError:
-        print("Please enter a valid number.")
 
-print("Program ended.")
+        print(inches * 2.54)
+
+inches_to_cm()
